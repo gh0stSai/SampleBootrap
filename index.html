@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="main.css">
+
+    <title>Trail - first bootstrap</title>
+</head>
+
+<body>
+    <!-- Naigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark "
+        style="background-color: rgb(112, 0, 0); position: fixed; top: 0; width: 100%; z-index: 50;">
+        <a class="navbar-brand" href="#">
+            <img src="https://thumbs.dreamstime.com/b/slice-pizza-isometric-icon-d-transparent-background-vector-illustration-87891607.jpg"
+                width="30" height="30" class="d-inline-block align-top" alt="">
+            Pizza
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about.html">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Topics
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact.html">Contact Us</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            <div class="mx-2">
+                <button type="button" class="btn btn-light" data-toggle="modal" data-target="#loginmode">Login</button>
+                <button type="button" class="btn btn-light" data-toggle="modal"
+                    data-target="#singupmode">SignUp</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SignUp Modal -->
+    <div class="modal fade" id="singupmode" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">SignUp</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <form class="form-signin">
+                        <img class="mb-4"
+                            src="https://media.istockphoto.com/vectors/funny-pizza-sign-in-retro-style-vector-id1128704035?k=20&m=1128704035&s=612x612&w=0&h=YW0qO0qnxortvu2PJNrop0AFJ1q_26FVMaYnSB553oc="
+                            alt="" width="120" height="120">
+                        <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+                        <label for="inputEmail" class="sr-only">Name</label>
+                        <input id="name" class="form-control" placeholder="Name" required="true" autofocus="">
+                        <label for="inputEmail" class="sr-only">Email address</label>
+                        <input type="email" id="inputEmail" class="form-control mt-2" placeholder="Email address"
+                            required="true" autofocus="">
+                        <label for="inputPassword" class="sr-only">Password</label>
+                        <input type="password" id="inputPassword" class="form-control mt-2" placeholder="Password"
+                            required="true">
+                        <div class="checkbox mb-3">
+                            <label>
+                                <input type="checkbox" value="remember-me" id="ckbx"> Remember me
+                            </label>
+                        </div>
+                        <button class="btn btn-lg btn-danger btn-block" type="submit">Sign in</button>
+                        <p class="mt-5 mb-3 text-muted">© 2022-2023</p>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginmode" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <form class="form-login">
+                        <img class="mb-4"
+                            src="https://media.istockphoto.com/vectors/funny-pizza-sign-in-retro-style-vector-id1128704035?k=20&m=1128704035&s=612x612&w=0&h=YW0qO0qnxortvu2PJNrop0AFJ1q_26FVMaYnSB553oc="
+                            alt="" width="120" height="120">
+                        <h1 class="h3 mb-3 font-weight-normal">Please login</h1>
+                        <label for="inputEmail" class="sr-only">Email address</label>
+                        <input type="email" id="inputEmail" class="form-control" placeholder="Email address"
+                            required="true" autofocus="">
+                        <label for="inputPassword" class="sr-only">Password</label>
+                        <input type="password" id="inputPassword" class="form-control mt-2" placeholder="Password"
+                            required="true">
+                        <div class="checkbox mb-3">
+                            <a href="#">Forget password</a>
+                        </div>
+                        <button class="btn btn-lg btn-danger btn-block" type="submit">Login</button>
+                        <p class="mt-5 mb-3 text-muted">© 2022-2023</p>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carousel -->
+    <div class="bd-example">
+        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://thumbs.dreamstime.com/b/different-types-pizza-round-white-table-surrounded-tea-utensils-cherry-tomatoes-flat-lay-close-up-horizontal-218152714.jpg"
+                        class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>First slide label</h5>
+                        <p>Variety of options Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, corrupti
+                            tempora! A quasi molestias laborum quaerat. Facere commodi numquam consectetur perferendis
+                            doloribus officia hic corrupti temporibus, praesentium, omnis maxime minus.</p>
+                        <button type="button" class="btn btn-danger">Menu</button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&h=500&q=60"
+                        class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Second slide label</h5>
+                        <p>Non veg Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi aspernatur ex odio
+                            necessitatibus aliquam unde consectetur, blanditiis, quisquam sint quis velit distinctio
+                            facere debitis magnam eos enim quas quod? Et?</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="data:image/jpeg;base64,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"
+                        class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Third slide label</h5>
+                        <p>Fresh Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam quidem iure expedita
+                            voluptate dolores unde corrupti optio, animi molestiae, reprehenderit est. A odio magni sint
+                            vel numquam iusto iure nisi!</p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Cards -->
+    <div class="container">
+        <div class="row mb-2 my-3">
+            <div class="col-md-6">
+                <div
+                    class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-warning">Garlic Bread</strong>
+                        <h3 class="mb-0">Featured post</h3>
+                        <div class="mb-1 text-muted">Nov 12</div>
+                        <p class="card-text mb-auto">This is a wider card with supporting text below as a natural
+                            lead-in to additional content.</p>
+                        <button type="button" class="btn btn-outline-warning">Buy Now</button>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img src="https://api.pizzahut.io/v1/content/en-in/in-1/images/side/mexican-garlic-breadstix-single.eab1259910d7d29cdba8ceb2e1b36355.1.jpg"
+                            width="200" height="250" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div
+                    class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-success">Toppings</strong>
+                        <h3 class="mb-0">Post title</h3>
+                        <div class="mb-1 text-muted">Nov 11</div>
+                        <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to
+                            additional content.</p>
+                        <button type="button" class="btn btn-outline-success">Buy Now</button>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img src="https://us.123rf.com/450wm/artistock/artistock1909/artistock190900189/129543650-designer-for-pizza-design-pizza-set-making-pizza-pizza-items-collection-cartoon-drawing-for-children.jpg?ver=6"
+                            width="200" height="250" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-2 my-3">
+            <div class="col-md-6">
+                <div
+                    class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary">Soft Drinks</strong>
+                        <h3 class="mb-0">Featured post</h3>
+                        <div class="mb-1 text-muted">Nov 12</div>
+                        <p class="card-text mb-auto">This is a wider card with supporting text below as a natural
+                            lead-in to additional content.</p>
+                        <button type="button" class="btn btn-outline-primary">Buy Now</button>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img src="https://media.istockphoto.com/photos/soft-drinks-splashing-picture-id655123574"
+                            width="200" height="250" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div
+                    class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-danger">Meals</strong>
+                        <h3 class="mb-0">Post title</h3>
+                        <div class="mb-1 text-muted">Nov 11</div>
+                        <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to
+                            additional content.</p>
+                        <button type="button" class="btn btn-outline-danger">Buy Now</button>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img src="https://cdn4.singleinterface.com/files/offer-images/10791/offer_details-2353_1603363016_MealFor40101min.jpg"
+                            width="200" height="250" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="pt-4 my-md-5 pt-md-5 border-top container">
+        <div class="row">
+            <div class="col-12 col-md">
+                <img class="mb-2" src="https://cdn.iconscout.com/icon/premium/png-256-thumb/pizza-580-1047848.png"
+                    alt="" width="24" height="24">
+                <small class="d-block mb-3 text-muted">© 2022-2023</small>
+            </div>
+            <div class="col-6 col-md">
+                <h5>Features</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href="#">Cool stuff</a></li>
+                    <li><a class="text-muted" href="#">Random feature</a></li>
+                    <li><a class="text-muted" href="#">Team feature</a></li>
+                    <li><a class="text-muted" href="#">Stuff for developers</a></li>
+                    <li><a class="text-muted" href="#">Another one</a></li>
+                    <li><a class="text-muted" href="#">Last time</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5>Resources</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href="#">Resource</a></li>
+                    <li><a class="text-muted" href="#">Resource name</a></li>
+                    <li><a class="text-muted" href="#">Another resource</a></li>
+                    <li><a class="text-muted" href="#">Final resource</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5>About</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href="#">Team</a></li>
+                    <li><a class="text-muted" href="#">Locations</a></li>
+                    <li><a class="text-muted" href="#">Privacy</a></li>
+                    <li><a class="text-muted" href="#">Terms</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
